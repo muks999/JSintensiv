@@ -5,7 +5,9 @@ function myFirstApp(name, age) {
 		function showSkills() {
 			let skills = ['HTML', 'CSS', 'WP'];
 			for (let i = 0; i < skills.length; i++) {
-				document.write("Я владею " + skills[i] + "<br>");  //я владею HTML <br>
+				//document.write("Я владею " + skills[i] + "<br>");  //я владею HTML <br>
+				//другой,способ вывода. лучше привыкнуть к нему! знак+ перед равно означает выводить все строки а не перезаписывать старое значение новым
+				document.body.innerHTML += "Я владею " + skills[i] + "<br>";
 			}
 		}
 		showSkills();
