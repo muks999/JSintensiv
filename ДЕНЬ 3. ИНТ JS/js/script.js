@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function () {
 //Получаем инф для работы
 	let products = document.querySelectorAll('.product'),
 		button = document.getElementsByTagName("button"),
-		openCart = document.getElementsByClassName('open')[0];
+		open = document.getElementsByClassName('open')[0];
 //функция для создания корзины
 function createCart() {
 	//Создаем элементы для корзины
@@ -44,7 +44,16 @@ let field = document.querySelector('.cart-field'),
 		});
 
 	}
+			function openCart() {
+				cart.style.display = 'block'
+			};
+
+			function closeCart() {
+				cart.style.display = 'none'
+			};
+
+			open.addEventListener('click', openCart);
+			close.addEventListener('click', closeCart);
 
 
-75
 })
